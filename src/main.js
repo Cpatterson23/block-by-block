@@ -1,5 +1,5 @@
 import * as weatherlib from '@cicciosgamino/openweather-apis';
-
+import Input from "input";
 const key = '3aad45db1823692854e69062c76be1ad';
 
 async function getClient(zipCode) {
@@ -11,9 +11,8 @@ async function getClient(zipCode) {
 }
 
 
-const zip = await input.text("what is your zipcode");
-const client = await getClient(64134);
-const rain = await client.getDescription();
-console.log("rain");
-
+const zipCode = await Input.text("what is the weather")
+const client = await getClient(zipCode);
+const outside = await client.getDescription();
+console.log(rain);
 
