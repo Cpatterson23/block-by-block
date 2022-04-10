@@ -12,7 +12,6 @@ async function getClient(zipCode) {
 
 
 const zipCode = await Input.text("what is the weather")
-const client = await getClient(zipCode);
-const outside = await client.getDescription();
-console.log(rain);
-
+const client = await getClient(64134);
+const outSide = await client.getDescription();
+console.log("rain");
